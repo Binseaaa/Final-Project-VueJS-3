@@ -19,7 +19,7 @@ class CategoriesFactory extends Factory
     {
         return [
             'recipes_id' => fake()->randomElement(Recipes::pluck('id')),
-            'categories' => fake()->randomElement(['Breakfast','Dinner','Lunch','Snacks', 'Dessert', 'Main Course']),
+            'categories' => fake()->randomElement(['Breakfast','Dinner','Lunch','Dessert']),
         ];
     }
 }

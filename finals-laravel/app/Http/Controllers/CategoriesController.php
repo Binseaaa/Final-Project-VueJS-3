@@ -8,20 +8,11 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
-    public function index() {
-        $category = Categories::orderBy('id')->get();
-
-        return response()->json($category);
-    }
 
     public function index1() {
         $category = Categories::orderBy('id')->get();
 
         return view('category.index', ['categories' =>$category]);
-    }
-    public function view(Categories $category) {
-        
-        return response()->json($category);
     }
 
     public function store(Request $request) {

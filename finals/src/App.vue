@@ -1,14 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView} from 'vue-router'
 
 </script>
+
 <template>
   <div class="content">
     <div class="left"> 
       <nav>
         <div class="left-header">
       <h2>VINCE MARIE C. DEGUMA</h2>
-      <h4>FINALS PROJECT</h4>
+      <p>FINALS PROJECT</p>
       </div>
       <div class="links">
         <div class="a">
@@ -18,7 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/recipes">Add a Recipe</RouterLink>
         </div>
         <div class="a">
-          <RouterLink to="/customer">Customers</RouterLink>
+          <RouterLink to="/category">Categories</RouterLink>
         </div>
       </div>
       </nav>
@@ -40,9 +41,6 @@ import { RouterLink, RouterView } from 'vue-router'
   line-height: 1;
   border-bottom: 1px solid;
 }
-.right {
-  overflow: auto;
-}
 .story2 {
         width: 10vw;
         text-align: center;
@@ -63,6 +61,7 @@ import { RouterLink, RouterView } from 'vue-router'
   background-color:rgb(225, 225, 225);
     height: 100vh;
     width: 100%;
+    overflow: auto;
 }
 nav {
   line-height: 2;

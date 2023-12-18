@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\RecipesController;
-use App\Http\Controllers\RestaurantsController;
+use App\Http\Controllers\CategoriesApiController;
+use App\Http\Controllers\RecipesApiController;
+use App\Http\Controllers\RestaurantsApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,26 +21,26 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/recipes/{recipe}', [RecipesController::class, 'view']);
-Route::patch('/recipes/{recipe}', [RecipesController::class, 'update']);
-Route::put('/recipes/{recipe}', [RecipesController::class, 'update']);
-Route::delete('/recipes/{recipe}', [RecipesController::class, 'destroy']);
+Route::get('/recipes/{recipe}', [RecipesApiController::class, 'view']);
+Route::patch('/recipes/{recipe}', [RecipesApiController::class, 'update']);
+Route::put('/recipes/{recipe}', [RecipesApiController::class, 'update']);
+Route::delete('/recipes/{recipe}', [RecipesApiController::class, 'destroy']);
 
-Route::get('/recipes', [RecipesController::class, 'index']);
-Route::post('/recipes', [RecipesController::class, 'store']);
+Route::get('/recipes', [RecipesApiController::class, 'index']);
+Route::post('/recipes', [RecipesApiController::class, 'store']);
 
-Route::get('/categories/{category}', [CategoriesController::class, 'view']);
-Route::patch('/categories/{category}', [CategoriesController::class, 'update']);
-Route::put('/categories/{category}', [CategoriesController::class, 'update']);
-Route::delete('/categories/{category}', [CategoriesController::class, 'destroy']);
+Route::get('/categories/{category}', [CategoriesApiController::class, 'view']);
+Route::patch('/categories/{category}', [CategoriesApiController::class, 'update']);
+Route::put('/categories/{category}', [CategoriesApiController::class, 'update']);
+Route::delete('/categories/{category}', [CategoriesApiController::class, 'destroy']);
 
-Route::get('/categories', [CategoriesController::class, 'index']);
-Route::post('/categories', [CategoriesController::class, 'store']);
+Route::get('/categories/{category}', [CategoriesApiController::class, 'index']);
+Route::post('/categories', [CategoriesApiController::class, 'store']);
 
-Route::get('/restaurants/{restaurant}', [RestaurantsController::class, 'view']);
-Route::patch('/restaurants/{restaurant}', [RestaurantsController::class, 'update']);
-Route::put('/restaurants/{restaurant}', [RestaurantsController::class, 'update']);
-Route::delete('/restaurants/{restaurant}', [RestaurantsController::class, 'destroy']);
+Route::get('/restaurants/{restaurant}', [RestaurantsApiController::class, 'view']);
+Route::patch('/restaurants/{restaurant}', [RestaurantsApiController::class, 'update']);
+Route::put('/restaurants/{restaurant}', [RestaurantsApiController::class, 'update']);
+Route::delete('/restaurants/{restaurant}', [RestaurantsApiController::class, 'destroy']);
 
-Route::get('/restaurants', [RestaurantsController::class, 'index']);
-Route::post('/restaurants', [RestaurantsController::class, 'store']);
+Route::get('/restaurants', [RestaurantsApiController::class, 'index']);
+Route::post('/restaurants', [RestaurantsApiController::class, 'store']);

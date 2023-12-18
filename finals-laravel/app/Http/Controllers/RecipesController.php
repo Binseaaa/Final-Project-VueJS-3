@@ -7,20 +7,12 @@ use Illuminate\Http\Request;
 
 class RecipesController extends Controller
 {
-    public function index() {
-        $recipe = Recipes::orderBy('id')->get();
 
-        return response()->json($recipe);
-    }
 
     public function index1() {
         $recipe = Recipes::orderBy('id')->get();
 
         return view('recipe.index', ['recipes' =>$recipe]);
-    }
-    public function view(Recipes $recipe) {
-        
-        return response()->json($recipe);
     }
 
     public function store(Recipes $recipe,Request $request) {

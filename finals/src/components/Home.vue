@@ -42,7 +42,10 @@
 </template>
 
 <style scoped>
-
+.container {
+  padding: 0;
+  margin: 0;
+}
 .foods img {
   height: 30vh;
   width: 20vw;
@@ -66,7 +69,7 @@
       display: none;
       position: absolute;
       bottom: 0;
-      padding: 20px;
+      padding: 10px;
       border-radius: 5px;
       font-size: 1.5em;
     }
@@ -130,6 +133,7 @@
 
   .intro h4 {
     color: white;
+    font-size: 1em;
   }
   .intro {
     position: absolute;

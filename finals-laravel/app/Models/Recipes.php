@@ -14,4 +14,9 @@ class Recipes extends Model
         'description',
         'ingredients',
     ];
+
+    public function category()
+    {
+        return $this->hasOne(Categories::class, 'recipes_id');
+    }
 }

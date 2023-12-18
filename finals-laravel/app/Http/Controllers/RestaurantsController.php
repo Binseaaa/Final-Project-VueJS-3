@@ -9,21 +9,13 @@ use Illuminate\Http\Request;
 
 class RestaurantsController extends Controller
 {
-    public function index() {
-        $restaurant = Restaurants::orderBy('id')->get();
-
-        return response()->json($restaurant);
-    }
 
     public function index1() {
         $restaurant = Restaurants::orderBy('id')->get();
 
         return view('restaurant.index', ['restaurants' =>$restaurant]);
     }
-    public function view(Restaurants $restaurant) {
-        
-        return response()->json($restaurant);
-    }
+
 
     public function store(Request $request) {
         $request->validate([
